@@ -6,7 +6,6 @@ import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.Statement;
 import java.util.HashMap;
-import java.util.Map;
 import java.util.Properties;
 
 import javax.sql.DataSource;
@@ -15,7 +14,7 @@ import com.jolbox.bonecp.BoneCPConfig;
 import com.jolbox.bonecp.BoneCPDataSource;
 
 public class DB {
-	private static final Map<String, BoneCPDataSource> map = new HashMap<>();
+	private static final HashMap<String, BoneCPDataSource> map = new HashMap<>();
 
 	public static final void init(File dir) {
 		if (dir == null || dir.listFiles() == null) return;
